@@ -71,12 +71,13 @@ You would still need to define what the parameters mean for languages that don't
 
 The names in r2_args correspond to:
 ```
-[times][cmd][ arg][~grep][@addr][!size]
+[times][cmd][ arg][~grep][@at|to][!size]
 ```
 
 ```
-$r2api->disassembleBytes(times => 100, at => 0xAABBCCDD)
-$r2api->writeBytes(arg => '0x90', times => 30, at => 0xAABBCCDD)
+$r2api->disassembleBytes(times => 100, at => 0xAABBCCDD);
+$r2api->writeBytes(arg => '0x90', times => 30, at => 0xAABBCCDD);
+$r2api->seek(to => 'OxAABBCCDD');
 ```
 
 ## Conclusions
