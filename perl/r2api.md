@@ -24,7 +24,7 @@ $r2api->disassembleFunction('0x00404030');
 API Functions are provided by using AUTOLOAD to catch non-existing methods in r2api. The called method is then mapped to a r2 command. The mapping itself (function name, arguments, ...) is defined in JSON.
 
 JSON Struct:
-```
+```json
 {
     "disassembleFunction": {
         "r2_args": [
@@ -74,7 +74,7 @@ The names in r2_args correspond to:
 [times][cmd][ arg][~grep][@at|to][!size]
 ```
 
-```
+```perl
 $r2api->disassembleBytes(times => 100, at => 0xAABBCCDD);
 $r2api->writeBytes(arg => '0x90', times => 30, at => 0xAABBCCDD);
 $r2api->seek(to => 'OxAABBCCDD');
